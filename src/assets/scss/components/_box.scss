@@ -1,0 +1,26 @@
+.box-wrap {
+  padding: 30px 0;
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 60px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid Gainsboro;
+  box-shadow: 6px 6px gainsboro;
+  background-color: var(--bg-box-color);
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  &--primary {
+    --bg-box-color: var(--primary-color)
+  }
+
+  &--secondary {
+    --bg-box-color: var(--secondary-color)
+  }
+}
