@@ -1,4 +1,5 @@
 /*! ie11CustomProperties.js v3.1.0 | MIT License | https://git.io/fjXMN */
+
 !(function () {
   'use strict'
 
@@ -6,6 +7,8 @@
   var testEl = document.createElement('i')
   testEl.style.setProperty('--x', 'y')
   if (testEl.style.getPropertyValue('--x') === 'y' || !testEl.msMatchesSelector) return
+
+  console.log('paso')
 
   if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector
 

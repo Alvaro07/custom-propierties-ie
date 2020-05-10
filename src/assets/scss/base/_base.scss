@@ -1,6 +1,5 @@
 :root {
-  --primary-color: tomato;
-  --secondary-color: MediumSeaGreen;
+  
 }
 
 html {
@@ -8,13 +7,33 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
+  --bg-color: AliceBlue;
+  --txt-color: #333;
+  --primary-color: tomato;
+  --secondary-color: MediumSeaGreen;
+  --tertiary-color: SteelBlue;
+
+  background-color: var(--bg-color);
+
+  &.secondary-theme {
+    --bg-color: DarkSlateGray;
+    --txt-color: Gainsboro;
+    --primary-color: Goldenrod;
+    --secondary-color: MediumOrchid;
+    --tertiary-color: Crimson;
+  }
 }
 
 .app {
-  padding: 30px;
+  margin: 15px;
+  padding: 30px 15px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
 
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  color: var(--txt-color);
+  
   &__title {
     font-size: 2.8rem;
     font-weight: 300;

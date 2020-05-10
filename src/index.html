@@ -10,13 +10,31 @@
 </head>
 
 <body>
-    <div id="app" class="app">
-      <h2 class="app__title">👻 Custom propierties IE test</h2>
+  <div id="app" class="app">
+    <h2 class="app__title">👻 Custom propierties IE test</h2>
 
-      <section class="box-wrap">
-        <div class="box box--primary"></div>
-        <div class="box box--secondary"></div>
-      </section>
-    </div>
+    <section class="box-wrap">
+      <div class="box box--primary">
+        <p>var(--primary-color)</p>
+      </div>
+      <div class="box box--secondary">
+        <p>var(--secondary-color)</p>
+      </div>
+      <div class="box box--tertiary">
+        <p>var(--tertiary-color)</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable secondary theme!</em>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>
