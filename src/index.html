@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
   <title>IE Custom propierties</title>
+  
+
 </head>
 
 <body>
@@ -25,7 +26,7 @@
       </div>
     </section>
 
-    <footer>
+    <section>
       <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
           <input type="checkbox" id="checkbox" />
@@ -33,8 +34,31 @@
         </label>
         <em>Enable secondary theme!</em>
       </div>
-    </footer>
-  </div>
-</body>
+    </section>
 
+    <section class="actions">
+      <button class="c-button" id="changePrimary">Change custom propierty (--primary-color) to black with Javascript</button>
+    </section>
+
+
+    <section class="problems">
+      <h3 class="problems__title">Problems</h3>
+      <div>
+        <p># Reassignment of custom propierties for ie11 does not work</p>
+        <!-- <code>
+          &--tertiary {
+            --bg-box-color: var(--tertiary-color)
+          }
+        </code> -->
+      </div>
+      <p># Rgba Sass function does not work with Hex. colors</p>
+    </section>
+
+  </div>
+
+  
+
+
+  
+</body>
 </html>

@@ -14,22 +14,21 @@
   border-radius: 3px;
   border: 1px solid Gainsboro;
   box-shadow: 4px 4px gainsboro;
-  background-color: var(--bg-box-color);
 
   &:not(:first-child) {
     margin-left: 15px;
   }
 
   &--primary {
-    --bg-box-color: var(--primary-color)
+    background-color: var(--primary-color)
   }
 
   &--secondary {
-    --bg-box-color: var(--secondary-color)
+    background-color: var(--secondary-color);
   }
 
   &--tertiary {
-    --bg-box-color: var(--tertiary-color)
+    background-color: var(--tertiary-color)
   }
 
 

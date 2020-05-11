@@ -1,5 +1,4 @@
 /*! ie11CustomProperties.js v3.1.0 | MIT License | https://git.io/fjXMN */
-
 !(function () {
   'use strict'
 
@@ -7,8 +6,6 @@
   var testEl = document.createElement('i')
   testEl.style.setProperty('--x', 'y')
   if (testEl.style.getPropertyValue('--x') === 'y' || !testEl.msMatchesSelector) return
-
-  console.log('paso')
 
   if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector
 
@@ -49,7 +46,7 @@
     var i = 0; var el; var els = []
     try {
       target && target.matches(listener.selector) && els.push(target)
-    } catch (e) { }
+    } catch (e) {}
     if (loaded) { // ok? check inside node on innerHTML - only when loaded
       Array.prototype.push.apply(els, qsa(target || root, listener.selector))
     }
@@ -294,7 +291,7 @@
         if (value === '') continue
         try {
           style[prop] = value
-        } catch (e) { }
+        } catch (e) {}
       }
     }
   }
@@ -369,15 +366,19 @@
 			var important = style['-ieVar-❗' + prop];
 			let valueWithVar = important || style['-ieVar-' + prop];
 			if (!valueWithVar) continue; // todo, what if '0'
+
 			var details = {};
 			var value = styleComputeValueWidthVars(style, valueWithVar, details);
+
 			if (important) value += ' !important';
 			for (var i=0, item; item=el.ieCPSelectors[prop][i++];) { // todo: split and use requestAnimationFrame?
 				if (item.selector === '%styleAttr') {
 					el.style[prop] = value;
 				} else {
+
 					// beta
 					if (!important && details.allByRoot !== false) continue; // dont have to draw root-properties
+
 					//let selector = item.selector.replace(/>? \.[^ ]+/, ' ', item.selector); // todo: try to equalize specificity
 					let selector = item.selector;
 					elementStyleSheet(el).insertRule(selector + '.iecp-u' + el.ieCP_unique + item.pseudo + ' {' + prop + ':' + value + '}', 0);
@@ -395,6 +396,7 @@
 		}
 		return el.ieCP_sheet;
 	}
+
 	/* */
   function _drawElement (el) {
     if (!el.ieCP_unique) { // use el.uniqueNumber? but needs class for the css-selector => test performance
