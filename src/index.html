@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <title>IE Custom propierties</title>
+  <title>IE Custom properties</title>
 
 </head>
 
 <body>
   <div id="app" class="app">
-    <h2 class="app__title">👻 Custom propierties IE test</h2>
+    <h2 class="app__title">👻 Custom properties IE test</h2>
 
     <section class="box-wrap">
       <div class="box box--primary">
@@ -39,7 +39,7 @@
     </section>
 
     <section class="actions">
-      <button class="c-button" id="changePrimary">Change custom propierty (--primary-color) to black with
+      <button class="c-button" id="changePrimary">Change custom property (--primary-color) to black with
         Javascript</button>
     </section>
 
@@ -48,11 +48,11 @@
       <h3 class="problems__title">Problems</h3>
       <ul>
         <li class="problems__item">
-          <p># Reassignment of custom propierties for ie11 does not work</p>
+          <p># Reassignment of custom properties for ie11 does not work (Polyfill problem)</p>
           <p class="solution">Solution: directly assign</p>
         </li>
         <li>
-          <p># Rgba Sass function does not work with custom propierties colors</p>
+          <p># Rgba Sass function does not work with custom properties colors (Custom properties problem)</p>
           <p class="solution">Solution: rbg colors (--tertiary-color-rgb: 220, 20, 60)</p>
         </li>
       </ul>
