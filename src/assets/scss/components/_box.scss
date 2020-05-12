@@ -17,7 +17,7 @@
   border-radius: 3px;
   border: 1px solid Gainsboro;
   box-shadow: 4px 4px gainsboro;
-  // background-color: var(--bg-box);
+  background-color: var(--bg-box);
 
   &:not(:first-child) {
     margin-left: 15px;
@@ -36,6 +36,11 @@
   &--tertiary {
     // --bg-box: var(--tertiary-color)
     background-color: var(--tertiary-color)
+  }
+
+  &--quaternary {
+    --bg-box: var(--quaternary-color);
+    // background-color: var(--tertiary-color)
   }
 
   & > p {
