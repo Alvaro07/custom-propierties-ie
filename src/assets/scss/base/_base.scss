@@ -8,6 +8,7 @@ body {
   --primary-color: tomato;
   --secondary-color: MediumSeaGreen;
   --tertiary-color: SteelBlue;
+  --tertiary-color-rgb: 70, 130, 180;
 
   background-color: var(--bg-color);
 
@@ -17,6 +18,7 @@ body {
     --primary-color: Goldenrod;
     --secondary-color: MediumOrchid;
     --tertiary-color: Crimson;
+    --tertiary-color-rgb: 220, 20, 60;
   }
 }
 
@@ -41,6 +43,8 @@ body {
   padding-top: 30px;
   margin-top: 30px;
   border-top: 1px dotted Gainsboro;
+
+
   
   &__title {
     font-weight: 500;
@@ -48,10 +52,18 @@ body {
     padding-bottom: 10px;
   }
 
+  &__item:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
   p {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: normal;
+
+    &.solution {
+      padding: 5px 0 0 5px;
+    } 
   }
 
 }

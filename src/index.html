@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>IE Custom propierties</title>
-  
 
 </head>
 
@@ -37,28 +36,31 @@
     </section>
 
     <section class="actions">
-      <button class="c-button" id="changePrimary">Change custom propierty (--primary-color) to black with Javascript</button>
+      <button class="c-button" id="changePrimary">Change custom propierty (--primary-color) to black with
+        Javascript</button>
     </section>
 
 
     <section class="problems">
       <h3 class="problems__title">Problems</h3>
-      <div>
-        <p># Reassignment of custom propierties for ie11 does not work</p>
-        <!-- <code>
-          &--tertiary {
-            --bg-box-color: var(--tertiary-color)
-          }
-        </code> -->
-      </div>
-      <p># Rgba Sass function does not work with Hex. colors</p>
+      <ul>
+        <li class="problems__item">
+          <p># Reassignment of custom propierties for ie11 does not work</p>
+          <p class="solution">Solution: directly assign</p>
+        </li>
+        <li>
+          <p># Rgba Sass function does not work with custom propierties colors</p>
+          <p class="solution">Solution: rbg colors (--tertiary-color-rgb: 220, 20, 60)</p>
+        </li>
+      </ul>
     </section>
 
   </div>
 
-  
 
 
-  
+
+
 </body>
+
 </html>
